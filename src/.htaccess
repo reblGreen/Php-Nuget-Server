@@ -266,3 +266,6 @@ RewriteRule (.*)api/v3/package/([^/]+)/([^/]+)$  /edsa-nuget/api/v3/index.php?ac
 
 
 #Commons
+
+#Required by PHP CGI
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
